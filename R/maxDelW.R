@@ -33,10 +33,10 @@
 #' @export
 maxDelW <- function(tree, method="modified"){
   
-  message("Note that there was a spelling error in the previous manual of this function - we wrote 'maximum difference in widths' while the given definition and the R code corresponded to the 'modified maximum difference in width'.")
+  #message("Note that there was a spelling error in the previous manual of this function - we wrote 'maximum difference in widths' while the given definition and the R code corresponded to the 'modified maximum difference in width'.")
   
   if (!inherits(tree,"phylo")) stop("The input tree must be in phylo-format.")
-  if (!(method %in% c("original", "modified"))) stop("The method must bei either 'original' or 'modified'.")
+  if (!(method %in% c("original", "modified"))) stop("The method must be either 'original' or 'modified'.")
   n <- length(tree$tip.label)
   
   if(n==1){
@@ -55,3 +55,4 @@ maxDelW <- function(tree, method="modified"){
   }
   
 }
+
